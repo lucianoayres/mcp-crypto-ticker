@@ -88,3 +88,21 @@ Price: $${price}
 
 const transport = new StdioServerTransport()
 await server.connect(transport)
+
+async function getBitcoinPrice() {
+  try {
+    const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+    const data = await response.json()
+    return data.bitcoin.usd
+  } catch (error) {
+    console.error("Error fetching Bitcoin price:", error)
+    return null
+  }
+}
+
+// Example usage
+getBitcoinPrice().then((price) => {
+  if (price) {
+    console.log(`Current Bitcoin price: $${price.toLocaleString()}`)
+  }
+})
