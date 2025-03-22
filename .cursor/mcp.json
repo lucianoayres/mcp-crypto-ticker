@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "MCP Crypto Ticker Server": {
+      "command": "/path/tonode",
+      "args": ["/path/to/mcp-crypto-ticker/mcp-crypto-ticker.js"]
+    }
+  }
+}

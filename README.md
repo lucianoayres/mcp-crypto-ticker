@@ -1,3 +1,7 @@
+Below is the updated README file with the new configuration instructions:
+
+---
+
 # MCP Crypto Ticker Tool
 
 ## Overview
@@ -52,30 +56,25 @@ This project demonstrates an MCP server that provides a crypto ticker tool. It u
 
 ## Integrating with Cursor AI
 
-After correctly installing and configuring your MCP server, you can integrate it with Cursor AI as follows:
+This project now includes a `.cursor` subdirectory that contains an `mcp.json` file for configuring the MCP server. Open the file and update the following fields:
 
-1. **Open Cursor AI Settings:**
+- **command:** Replace this field with the absolute path to your Node.js executable. For example:
 
-   - Navigate to **Settings** > **Features** > **MCP Servers**.
+  ```
+  /home/john/.nvm/versions/node/v20.13.1/bin/node
+  ```
 
-2. **Add a New MCP Server:**
+- **argument:** Replace this field with the absolute path to your MCP server JavaScript file. For example:
 
-   - Click on **+ Add new MCP Server**.
+  ```
+  /home/john/mcp-crypto-ticker/mcp-crypto-ticker.js
+  ```
 
-3. **Configure the MCP Server:**
+You can verify the absolute path to your Node.js executable by running `which node` in your terminal.
 
-   - **Server Name:** Enter a descriptive name (e.g., `MCP Crypto Ticker`).
-   - **Server Type:** Select the **command** type.
-   - **Server URL:** Provide the command that runs the MCP server. Use the absolute path to your Node.js executable followed by the absolute path to your MCP server file. For example:
+### Optional: Global Configuration
 
-     ```
-     /home/john/.nvm/versions/node/v20.13.1/bin/node /home/john/mcp-crypto-ticker/mcp-crypto-ticker.js
-     ```
-
-   - **Hint:** Use `which node` in your terminal to obtain the absolute path of your Node.js executable.
-
-4. **Save the Configuration:**
-   - Click **Save** to add the MCP server to Cursor AI.
+If you prefer, you can move the `mcp.json` file from the `.cursor` subdirectory to your global Cursor AI configuration directory located at `~/.cursor`. This allows Cursor AI to recognize your MCP server configuration globally.
 
 ## Using the MCP Tool in Cursor Composer (Agent Mode)
 
