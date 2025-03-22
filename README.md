@@ -56,16 +56,6 @@ This project demonstrates an MCP server that provides a crypto ticker tool. It u
    "type": "module"
    ```
 
-3. **Ensure Node.js Version 20+**
-
-   Confirm your Node.js version by running:
-
-   ```bash
-   node -v
-   ```
-
-   Update Node.js if necessary.
-
 ## Integrating with Cursor AI
 
 This project now includes a `.cursor` subdirectory that contains an `mcp.json` file for configuring the MCP server. Open the file and update the following fields:
