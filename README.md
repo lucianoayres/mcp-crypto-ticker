@@ -32,8 +32,28 @@ This project demonstrates an MCP server that provides a crypto ticker tool. It u
 
 2. **Install Dependencies**
 
+   You can install the project dependencies in one of two ways:
+
+   **Option 1: Install using the existing `package.json`**
+
+   Simply run:
+
+   ```bash
+   npm install
+   ```
+
+   **Option 2: Install dependencies manually**
+
+   If you prefer, delete the existing `package.json` and install the required packages manually:
+
    ```bash
    npm install @modelcontextprotocol/sdk @coinpaprika/api-nodejs-client zod
+   ```
+
+   Then, update the newly generated `package.json` file to include the following line, which enables ES Modules:
+
+   ```json
+   "type": "module"
    ```
 
 3. **Enable ES Modules**
