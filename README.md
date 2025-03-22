@@ -56,15 +56,7 @@ This project demonstrates an MCP server that provides a crypto ticker tool. It u
    "type": "module"
    ```
 
-3. **Enable ES Modules**
-
-   After installing dependencies, edit your `package.json` to include:
-
-   ```json
-   "type": "module"
-   ```
-
-4. **Ensure Node.js Version 20+**
+3. **Ensure Node.js Version 20+**
 
    Confirm your Node.js version by running:
 
